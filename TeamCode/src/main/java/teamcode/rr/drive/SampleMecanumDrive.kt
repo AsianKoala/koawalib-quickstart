@@ -31,7 +31,7 @@ class SampleMecanumDrive(hardwareMap: HardwareMap) : MecanumDrive(
     private val follower: TrajectoryFollower
     private val fl = MotorFactory("fl").reverse.brake.voltageCorrected.build()
     private val bl = MotorFactory("bl").reverse.brake.voltageCorrected.build()
-    val br = MotorFactory("br").brake.voltageCorrected.build()
+    private val br = MotorFactory("br").brake.voltageCorrected.build()
     private val fr = MotorFactory("fr").brake.voltageCorrected.build()
 
     fun trajectorySequenceBuilder(startPose: Pose2d?): TrajectorySequenceBuilder {
